@@ -1,0 +1,39 @@
+<div id="app">
+  <web-component-example
+    class="vueBtn"
+    [height]="btnHeight"
+    [width]="btnWidth"
+    [color]="btnColor"
+    (alert-fired)="onAlertClicked()"
+  >
+  </web-component-example>
+
+  <div class="sizeControl">
+    <button class="sizeBtn" (click)="increaseSizeHandler()">
+      Increase Btn Size
+    </button>
+    <button class="sizeBtn" (click)="decreaseSizeHandler()">
+      Decrease Btn Size
+    </button>
+    <button class="sizeBtn" (click)="changeBtnColor()">Change Btn Color</button>
+  </div>
+</div>
+
+<style>
+  .vueBtn {
+    margin: 20%;
+    text-align: center;
+  }
+  .sizeControl {
+    text-align: center;
+  }
+  .sizeBtn {
+    background-color: rgb(236, 28, 188);
+    color: whitesmoke;
+    width: 10%;
+    height: 50px;
+    margin-inline: 3%;
+    border: solid white 1px;
+    border-radius: 4rem;
+  }
+</style>
